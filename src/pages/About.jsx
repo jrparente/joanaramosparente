@@ -1,16 +1,40 @@
 import {
-  Link,
+  StyledLink,
+  Btn,
   Title,
   Subtitle,
   Paragraph,
   Section,
   TechStack,
   TechStackItem,
-  Btn,
   FlexWrap,
   Tooltip,
   Highlight,
 } from "../components/Theme/Utils";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+
+const BtnLink = styled(Link)`
+  font-size: 1.5rem;
+  padding: 0.7em 1.5em;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: ${({ theme }) => theme.body};
+  background-color: ${({ theme }) => theme.accent};
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  transition: transform 250ms ease 0s, filter 250ms ease 0s;
+  &:hover {
+    filter: hue-rotate(4deg) saturate(120%) brightness(120%);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+`;
 
 export default function Contact() {
   return (
@@ -53,19 +77,15 @@ export default function Contact() {
           <Tooltip data-title="Who doesn't want that, right? 😉">*</Tooltip>.
         </Paragraph>
 
-        <Subtitle>TL;DR</Subtitle>
-
         <Paragraph>
           Fast forward a few years, to when I came across{" "}
-          <Link href="#" target="_blank" className="link">
+          <StyledLink href="https://shecodes.io/" target="_blank">
             SheCodes
-          </Link>
+          </StyledLink>
           . My passion for programming kicked-in, I{" "}
           <Highlight>started learning how to code</Highlight> and{" "}
-          <Link href="#projects" className="link">
-            working on some side-projects
-          </Link>
-          . I have been loving to learn programming and am looking forward to{" "}
+          <StyledLink to="/projects">working on some side-projects</StyledLink>.
+          I have been loving to learn programming and am looking forward to{" "}
           <Highlight>working full time as a developer</Highlight>.
         </Paragraph>
 
@@ -75,25 +95,41 @@ export default function Contact() {
           development and UX concepts, which I apply on the projects that I work
           on. Here is the current teck-stack that I'm most comfortable with:
         </Paragraph>
+        <Paragraph>Programming Languages:</Paragraph>
+        <TechStack>
+          <TechStackItem>JavaScript ES6</TechStackItem>
+        </TechStack>
+        <Paragraph>Frontend:</Paragraph>
         <TechStack>
           <TechStackItem>HTML5</TechStackItem>
           <TechStackItem>CSS3</TechStackItem>
-          <TechStackItem>JavaScript ES6</TechStackItem>
           <TechStackItem>React</TechStackItem>
-          <TechStackItem>Git</TechStackItem>
           <TechStackItem>
             Bootstrap
             <Tooltip data-title="I'm comfortable with Bootstrap, but I prefer to find my own solutions to create responsive and beautiful UI.">
               *
             </Tooltip>
           </TechStackItem>
-          <TechStackItem>API</TechStackItem>
           <TechStackItem>Shopify Liquid</TechStackItem>
         </TechStack>
+        <Paragraph>Backend:</Paragraph>
+        <TechStack>
+          <TechStackItem>Node.js</TechStackItem>
+        </TechStack>
+        <Paragraph>Other Tools:</Paragraph>
+        <TechStack>
+          <TechStackItem>Git</TechStackItem>
+          <TechStackItem>Github</TechStackItem>
+          <TechStackItem>npm</TechStackItem>
+          <TechStackItem>API</TechStackItem>
+          <TechStackItem>Figma</TechStackItem>
+          <TechStackItem>Canva</TechStackItem>
+          <TechStackItem>Adobe Photoshop</TechStackItem>
+        </TechStack>
         <FlexWrap>
-          <Btn href="/">Check Certifications</Btn>
+          <BtnLink to="./Certifications">Check Certifications</BtnLink>
           <Btn href="https://www.linkedin.com/in/joanaparente" target="_blank">
-            <i className="fa-brands fa-linkedin"></i> LinkedIn
+            <FontAwesomeIcon icon={faLinkedinIn} /> LinkedIn
           </Btn>
         </FlexWrap>
       </Section>

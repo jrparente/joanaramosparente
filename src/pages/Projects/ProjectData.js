@@ -5,7 +5,7 @@ export default [
     description:
       "My playground for testing out new skills! Built with Vite, it's a React website with enhanced with cool packages like Styled Components and React Router.",
     links: {
-      github: "https://github.com/jrparente/joanaramosparente-v4.0-React-",
+      github: "https://github.com/jrparente/joanaramosparente",
       live: "",
       instagram: "",
     },

@@ -14,7 +14,8 @@ export const FlexWrap = styled.div`
 
 // Typography
 
-export const Link = styled.a`
+export const StyledLink = styled.a`
+  cursor: pointer;
   text-decoration: none;
   font-weight: 500;
   color: ${({ theme }) => theme.accent};
@@ -56,6 +57,7 @@ export const FW600 = styled.span`
 
 export const Tooltip = styled.span`
   position: relative;
+  font-size: 1.5rem;
   font-weight: 600;
   color: ${({ theme }) => theme.accent};
   &:hover:after {
@@ -141,6 +143,8 @@ export const TechStack = styled.ul`
 `;
 
 export const TechStackItem = styled.li`
+  display: flex;
+  align-items: center;
   font-size: 1.2rem;
   padding: 0.1em 0.5em;
   border: 1px solid ${({ theme }) => theme.accent};

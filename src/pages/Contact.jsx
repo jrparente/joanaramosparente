@@ -1,4 +1,9 @@
-import { Link, Paragraph, Section, Title } from "../components/Theme/Utils";
+import {
+  StyledLink,
+  Paragraph,
+  Section,
+  Title,
+} from "../components/Theme/Utils";
 
 export default function Contact() {
   return (
@@ -9,9 +14,9 @@ export default function Contact() {
         question, or just want to connect.
       </Paragraph>
       <Paragraph>
-        <Link href="mailto:jrparente@gmail.com" className="link">
+        <StyledLink href="mailto:jrparente@gmail.com" className="link">
           jrparente@gmail.com
-        </Link>
+        </StyledLink>
       </Paragraph>
     </Section>
   );

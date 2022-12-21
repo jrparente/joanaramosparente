@@ -1,5 +1,10 @@
 import styled from "styled-components";
-import { Link, Paragraph, Section, FW600 } from "../components/Theme/Utils";
+import {
+  StyledLink,
+  Paragraph,
+  Section,
+  FW600,
+} from "../components/Theme/Utils";
 
 const Hello = styled.p`
   font-family: "Spectral", serif;
@@ -32,22 +37,21 @@ export default function Home() {
         <Hello>Hi, happy {today} 👋</Hello>
         <HomeTitle>
           I'm <FW600>Joana Parente</FW600>, a{" "}
-          <Link
+          <StyledLink
             href="https://github.com/jrparente/"
             target="_blank"
             rel="noopener noreferrer"
-            Link
           >
             Developer in-training
-          </Link>{" "}
+          </StyledLink>{" "}
           and{" "}
-          <Link
+          <StyledLink
             href="https://www.linkedin.com/in/joanaparente"
             target="_blank"
             rel="noopener noreferrer"
           >
             Jack of all trades
-          </Link>
+          </StyledLink>
           .
         </HomeTitle>
         <Paragraph>

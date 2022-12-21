@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "./Theme/Utils";
+import { StyledLink } from "./Theme/Utils";
 import {
   faGithub,
   faLinkedinIn,
@@ -37,29 +37,35 @@ export default function Footer() {
   return (
     <FooterContainer>
       <IconsContainer>
-        <Link href="https://www.linkedin.com/in/joanaparente" target="_blank">
+        <StyledLink
+          href="https://www.linkedin.com/in/joanaparente"
+          target="_blank"
+        >
           <FontAwesomeIcon icon={faLinkedinIn} />
-        </Link>
-        <Link href="https://github.com/jrparente" target="_blank">
+        </StyledLink>
+        <StyledLink href="https://github.com/jrparente" target="_blank">
           <FontAwesomeIcon icon={faGithub} />
-        </Link>
-        <Link href="https://codepen.io/Jrparente/" target="_blank">
+        </StyledLink>
+        <StyledLink href="https://codepen.io/Jrparente/" target="_blank">
           <FontAwesomeIcon icon={faCodepen} />
-        </Link>
-        <Link href="mailto:jrparente@gmail.com" className="text-dark fs-400">
+        </StyledLink>
+        <StyledLink
+          href="mailto:jrparente@gmail.com"
+          className="text-dark fs-400"
+        >
           <FontAwesomeIcon icon={faEnvelope} />
-        </Link>
+        </StyledLink>
       </IconsContainer>
       <TextContainer>
         <SmallText>
           Designed and coded by me. Open sourced on{" "}
-          <Link
-            href="https://github.com/jrparente/joanaramosparente-v4.0-React-"
+          <StyledLink
+            href="https://github.com/jrparente/joanaramosparente"
             className="link"
             target="_blank"
           >
             GitHub
-          </Link>{" "}
+          </StyledLink>{" "}
           and deployed with Netlify. Feedback is appreciated 😌
         </SmallText>
         <SmallText>Last updated on: December 21st 2022</SmallText>

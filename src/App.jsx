@@ -63,6 +63,7 @@ function App() {
           />
           <Container>
             <Routes>
+              <Route path="*" element={<NotFound />} />
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/projects">
@@ -70,7 +71,6 @@ function App() {
                 <Route path=":id" element={<Project />} />
               </Route>
               <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<NotFound />} />
             </Routes>
 
             <Footer />
