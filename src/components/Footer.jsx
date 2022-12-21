@@ -31,6 +31,9 @@ const TextContainer = styled.div`
 
 const SmallText = styled.p`
   font-size: 0.8rem;
+  @media (min-width: 35rem) {
+    text-align: right;
+  }
 `;
 
 export default function Footer() {
@@ -57,17 +60,7 @@ export default function Footer() {
         </StyledLink>
       </IconsContainer>
       <TextContainer>
-        <SmallText>
-          Designed and coded by me. Open sourced on{" "}
-          <StyledLink
-            href="https://github.com/jrparente/joanaramosparente"
-            className="link"
-            target="_blank"
-          >
-            GitHub
-          </StyledLink>{" "}
-          and deployed with Netlify. Feedback is appreciated 😌
-        </SmallText>
+        <SmallText>Designed and coded by me.</SmallText>
         <SmallText>Last updated on: December 21st 2022</SmallText>
       </TextContainer>
     </FooterContainer>

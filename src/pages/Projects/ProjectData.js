@@ -9,14 +9,7 @@ export default [
       live: "",
       instagram: "",
     },
-    techstack: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "React",
-      "Styled Components",
-      "React Router",
-    ],
+    techstack: ["JavaScript", "React", "Styled Components", "React Router"],
   },
   {
     id: 2,
@@ -28,7 +21,7 @@ export default [
       live: "https://simple-dinner-generator.netlify.app/",
       instagram: "",
     },
-    techstack: ["HTML5", "CSS3", "React"],
+    techstack: ["HTML5", "CSS3", "JavaScript", "React"],
   },
   {
     id: 3,
