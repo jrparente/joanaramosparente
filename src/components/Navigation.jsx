@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Toggle from "./Theme/Toggler";
 
@@ -58,7 +58,7 @@ const MenuUL = styled.ul`
   }
 `;
 
-const NavLink = styled(Link)`
+const StyledNavLink = styled(NavLink)`
   font-family: "League Spartan", sans-serif;
   font-weight: 300;
   font-size: 1.4rem;
@@ -71,7 +71,8 @@ const NavLink = styled(Link)`
   &:focus {
     background-color: ${({ theme }) => theme.background};
   }
-  &:active {
+  &:active,
+  &.active {
     color: ${({ theme }) => theme.accent};
     font-weight: 500;
   }
@@ -125,24 +126,24 @@ export default function Navigation(props) {
         </NavMobileToggle>
         <MenuUL id="primary-nav" aria-label="primary-nav">
           <li>
-            <NavLink to="/" onClick={props.changeShow}>
+            <StyledNavLink to="/" onClick={props.changeShow}>
               Home
-            </NavLink>
+            </StyledNavLink>
           </li>
           <li>
-            <NavLink to="/about" onClick={props.changeShow}>
+            <StyledNavLink to="/about" onClick={props.changeShow}>
               About
-            </NavLink>
+            </StyledNavLink>
           </li>
           <li>
-            <NavLink to="/projects" onClick={props.changeShow}>
+            <StyledNavLink to="/projects" onClick={props.changeShow}>
               Projects
-            </NavLink>
+            </StyledNavLink>
           </li>
           <li>
-            <NavLink to="/contact" onClick={props.changeShow}>
+            <StyledNavLink to="/contact" onClick={props.changeShow}>
               Contact
-            </NavLink>
+            </StyledNavLink>
           </li>
         </MenuUL>
         <Toggle theme={props.theme} toggleTheme={props.themeToggler} />
