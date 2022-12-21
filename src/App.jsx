@@ -10,7 +10,7 @@ import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
-import NotFound from "./pages/404";
+import NotFound from "./pages/NotFound";
 import Project from "./pages/Projects/Project";
 import { Container } from "./components/Theme/Utils";
 
