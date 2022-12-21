@@ -12,14 +12,12 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import NotFound from "./pages/404";
 import Project from "./pages/Projects/Project";
+import { Container } from "./components/Theme/Utils";
 
-const Container = styled.div`
-  min-height: 100vh;
-  width: calc(100% - 2rem);
-  max-width: 45rem;
-  margin-inline: auto;
+const MainGrid = styled.div`
   display: grid;
   grid-template-rows: 1fr auto;
+  min-height: 100vh;
 `;
 
 function App() {
@@ -62,18 +60,19 @@ function App() {
             showMobileMenu={showMobileMenu}
           />
           <Container>
-            <Routes>
-              <Route path="*" element={<NotFound />} />
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/projects">
-                <Route index element={<Projects />} />
-                <Route path=":id" element={<Project />} />
-              </Route>
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-
-            <Footer />
+            <MainGrid>
+              <Routes>
+                <Route path="*" element={<NotFound />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/projects">
+                  <Route index element={<Projects />} />
+                  <Route path=":id" element={<Project />} />
+                </Route>
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+              <Footer />
+            </MainGrid>
           </Container>
         </>
       </ThemeProvider>

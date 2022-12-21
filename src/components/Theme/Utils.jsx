@@ -2,14 +2,21 @@ import styled from "styled-components";
 
 // Layouts
 
+export const Container = styled.div`
+  width: calc(100% - 2rem);
+  max-width: 45rem;
+  margin-inline: auto;
+`;
+
 export const Section = styled.section`
-  margin-top: 6.5rem;
+  margin: 6.5rem 0;
 `;
 
 export const FlexWrap = styled.div`
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  margin: 2rem 0;
 `;
 
 // Typography
@@ -101,8 +108,6 @@ export const Btn = styled.a`
   border-radius: 5px;
   color: ${({ theme }) => theme.body};
   background-color: ${({ theme }) => theme.accent};
-  margin-top: 1rem;
-  margin-bottom: 2rem;
   transition: transform 250ms ease 0s, filter 250ms ease 0s;
   &:hover {
     filter: hue-rotate(4deg) saturate(120%) brightness(120%);
@@ -121,8 +126,6 @@ export const BtnDark = styled.a`
   border-radius: 5px;
   color: ${({ theme }) => theme.body};
   background-color: ${({ theme }) => theme.text};
-  margin-top: 1rem;
-  margin-bottom: 2rem;
   transition: transform 250ms ease 0s, filter 250ms ease 0s;
   &:hover {
     filter: hue-rotate(4deg) saturate(120%) brightness(120%);
