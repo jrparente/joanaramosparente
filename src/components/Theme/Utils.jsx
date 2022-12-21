@@ -34,7 +34,6 @@ export const Title = styled.p`
   line-height: 2.5rem;
   font-weight: 500;
   text-transform: uppercase;
-  margin-top: 3rem;
 `;
 
 export const Subtitle = styled.p`
