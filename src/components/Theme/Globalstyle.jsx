@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 *,
@@ -24,7 +24,7 @@ html {
   scroll-behavior: smooth;
 }
 
-  body {
+body {
     text-rendering: optimizeSpeed;
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
@@ -36,12 +36,11 @@ html {
     line-height: 1.5;
   }
 
-  #root {
+#root {
     min-height: 100vh;
   }
 
-  img,
-picture {
+img {
   max-width: 100%;
   display: block;
 }
@@ -51,5 +50,19 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important; /* 2 */
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important; /* 3 */
 }
   `;
