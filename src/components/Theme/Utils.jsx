@@ -9,7 +9,7 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.section`
-  margin: 6.5rem 0;
+  margin: 2.5rem 0;
 `;
 
 export const FlexWrap = styled.div`
