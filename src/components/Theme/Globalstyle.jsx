@@ -43,6 +43,7 @@ body {
 img {
   max-width: 100%;
   display: block;
+  margin: 1rem 0;
 }
 
 input,
