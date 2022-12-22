@@ -75,14 +75,15 @@ const StyledNavLink = styled(NavLink)`
   color: ${({ theme }) => theme.text};
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  &:hover {
-    background-color: ${({ theme }) => theme.background};
-  }
   &:active,
   &.active,
   &:focus {
     color: ${({ theme }) => theme.accent};
     font-weight: 500;
+  }
+  &:hover {
+    background-color: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.text};
   }
 `;
 

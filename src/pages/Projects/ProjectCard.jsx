@@ -5,8 +5,8 @@ import {
   Paragraph,
   TechStack,
   TechStackItem,
-  Subtitle,
   Card,
+  CardSubtitle,
 } from "../../components/Theme/Utils";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -19,9 +19,9 @@ export default function ProjectCard(props) {
 
   return (
     <Card>
-      <Subtitle>
+      <CardSubtitle>
         <FW600>{props.name}</FW600>
-      </Subtitle>
+      </CardSubtitle>
 
       <Paragraph>{props.description}</Paragraph>
 

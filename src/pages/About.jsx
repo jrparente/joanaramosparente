@@ -9,6 +9,8 @@ import {
   FlexWrap,
   Tooltip,
   Highlight,
+  Btn,
+  FW600,
 } from "../components/Theme/Utils";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -22,10 +24,8 @@ const BtnLink = styled(Link)`
   text-decoration: none;
   cursor: pointer;
   border-radius: 5px;
-  color: ${({ theme }) => theme.body};
+  color: ${({ theme }) => theme.textLight};
   background-color: ${({ theme }) => theme.accent};
-  margin-top: 1rem;
-  margin-bottom: 2rem;
   transition: transform 250ms ease 0s, filter 250ms ease 0s;
   &:hover {
     filter: hue-rotate(4deg) saturate(120%) brightness(120%);
@@ -94,11 +94,16 @@ export default function Contact() {
           development and UX concepts, which I apply on the projects that I work
           on. Here is the current teck-stack that I'm most comfortable with:
         </Paragraph>
-        <Paragraph>Programming Languages:</Paragraph>
+        <Paragraph>
+          {" "}
+          <FW600>Programming Languages:</FW600>{" "}
+        </Paragraph>
         <TechStack>
           <TechStackItem>JavaScript ES6</TechStackItem>
         </TechStack>
-        <Paragraph>Frontend:</Paragraph>
+        <Paragraph>
+          <FW600>Frontend:</FW600>
+        </Paragraph>
         <TechStack>
           <TechStackItem>HTML5</TechStackItem>
           <TechStackItem>CSS3</TechStackItem>
@@ -111,11 +116,15 @@ export default function Contact() {
           </TechStackItem>
           <TechStackItem>Shopify Liquid</TechStackItem>
         </TechStack>
-        <Paragraph>Backend:</Paragraph>
+        <Paragraph>
+          <FW600>Backend:</FW600>
+        </Paragraph>
         <TechStack>
           <TechStackItem>Node.js</TechStackItem>
         </TechStack>
-        <Paragraph>Other Tools:</Paragraph>
+        <Paragraph>
+          <FW600>Other Tools:</FW600>
+        </Paragraph>
         <TechStack>
           <TechStackItem>Git</TechStackItem>
           <TechStackItem>Github</TechStackItem>
@@ -127,12 +136,9 @@ export default function Contact() {
         </TechStack>
         <FlexWrap>
           <BtnLink to="/certifications">Check Certifications</BtnLink>
-          <BtnLink
-            href="https://www.linkedin.com/in/joanaparente"
-            target="_blank"
-          >
+          <Btn href="https://www.linkedin.com/in/joanaparente" target="_blank">
             <FontAwesomeIcon icon={faLinkedinIn} /> LinkedIn
-          </BtnLink>
+          </Btn>
         </FlexWrap>
       </Section>
     </>

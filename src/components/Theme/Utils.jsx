@@ -157,9 +157,21 @@ export const TechStackItem = styled.li`
 
 export const Card = styled.div`
   flex-direction: column;
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: 0 50px 100px rgb(50 50 93 / 5%), 0 15px 35px rgb(50 50 93 / 10%),
     0 5px 15px rgb(0 0 0 / 10%);
   border-radius: 5px;
   background-color: ${({ theme }) => theme.background};
+  @media (min-width: 35rem) {
+    padding: 2rem;
+  }
+`;
+
+export const CardSubtitle = styled.p`
+  font-family: "Spectral", serif;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 1rem;
 `;
