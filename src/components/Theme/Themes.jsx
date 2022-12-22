@@ -1,6 +1,7 @@
 export const lightTheme = {
   body: "#F9FAFB",
   text: "#444444",
+  textLight: "#ffffff",
   background: "#EAEAEA",
   accent: "#A30049",
   highlight: `linear-gradient(
@@ -12,9 +13,11 @@ export const lightTheme = {
     rgba(255, 255, 0, 0.8) 100%
   )`,
 };
+
 export const darkTheme = {
   body: "#111111",
   text: "#ffffff",
+  textLight: "#ffffff",
   background: "#555555",
   accent: "#A30049",
   highlight: `linear-gradient(

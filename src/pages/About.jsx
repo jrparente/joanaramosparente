@@ -1,6 +1,5 @@
 import {
   StyledLink,
-  Btn,
   Title,
   Subtitle,
   Paragraph,
@@ -127,10 +126,13 @@ export default function Contact() {
           <TechStackItem>Adobe Photoshop</TechStackItem>
         </TechStack>
         <FlexWrap>
-          <BtnLink to="./Certifications">Check Certifications</BtnLink>
-          <Btn href="https://www.linkedin.com/in/joanaparente" target="_blank">
+          <BtnLink to="/certifications">Check Certifications</BtnLink>
+          <BtnLink
+            href="https://www.linkedin.com/in/joanaparente"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faLinkedinIn} /> LinkedIn
-          </Btn>
+          </BtnLink>
         </FlexWrap>
       </Section>
     </>

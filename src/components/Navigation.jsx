@@ -20,8 +20,11 @@ const Nav = styled.nav`
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 0;
   transition: all 0.5s linear;
+  @media (min-width: 35rem) {
+    padding: 1rem;
+  }
 `;
 
 const NavMobileToggle = styled.button`
@@ -72,12 +75,12 @@ const StyledNavLink = styled(NavLink)`
   color: ${({ theme }) => theme.text};
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: ${({ theme }) => theme.background};
   }
   &:active,
-  &.active {
+  &.active,
+  &:focus {
     color: ${({ theme }) => theme.accent};
     font-weight: 500;
   }

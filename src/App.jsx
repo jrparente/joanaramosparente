@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import NotFound from "./pages/NotFound";
 import Project from "./pages/Projects/Project";
 import { Container } from "./components/Theme/Utils";
+import Certifications from "./pages/Certifications/Certifications";
 
 const MainGrid = styled.div`
   display: grid;
@@ -65,6 +66,7 @@ function App() {
                 <Route path="*" element={<NotFound />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/certifications" element={<Certifications />} />
                 <Route path="/projects">
                   <Route index element={<Projects />} />
                   <Route path=":id" element={<Project />} />

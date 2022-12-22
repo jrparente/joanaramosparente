@@ -106,7 +106,7 @@ export const Btn = styled.a`
   text-decoration: none;
   cursor: pointer;
   border-radius: 5px;
-  color: ${({ theme }) => theme.body};
+  color: ${({ theme }) => theme.textLight};
   background-color: ${({ theme }) => theme.accent};
   transition: transform 250ms ease 0s, filter 250ms ease 0s;
   &:hover {
