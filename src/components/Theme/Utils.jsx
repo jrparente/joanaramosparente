@@ -38,23 +38,29 @@ export const StyledLink = styled.a`
 
 export const Title = styled.p`
   font-family: "Spectral", serif;
-  font-size: 2.25rem;
+  font-size: 1.875rem;
   line-height: 2.5rem;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
+  @media (min-width: 35rem) {
+    font-size: 3rem;
+  }
 `;
 
 export const Subtitle = styled.p`
   font-family: "Spectral", serif;
-  font-size: 1.8rem;
+  font-size: 1rem;
   line-height: 2rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   margin-top: 3rem;
+  @media (min-width: 35rem) {
+    font-size: 1.125rem;
+  }
 `;
 
 export const Paragraph = styled.p`
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-top: 1rem;
 `;
 
@@ -100,7 +106,6 @@ export const Highlight = styled.span`
 // Components
 
 export const Btn = styled.a`
-  font-size: 1.5rem;
   padding: 0.7em 1.5em;
   border: 0;
   text-decoration: none;
@@ -117,22 +122,9 @@ export const Btn = styled.a`
   }
 `;
 
-export const BtnDark = styled.a`
-  font-size: 1.5rem;
-  padding: 0.7em 1.5em;
-  border: 0;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 5px;
+export const BtnDark = styled(Btn)`
   color: ${({ theme }) => theme.body};
   background-color: ${({ theme }) => theme.text};
-  transition: transform 250ms ease 0s, filter 250ms ease 0s;
-  &:hover {
-    filter: hue-rotate(4deg) saturate(120%) brightness(120%);
-  }
-  &:active {
-    transform: scale(0.95);
-  }
 `;
 
 export const TechStack = styled.ul`
@@ -141,14 +133,14 @@ export const TechStack = styled.ul`
   padding-left: 0;
   gap: 0.5rem;
   flex-wrap: wrap;
-  margin-top: 2rem;
   margin-bottom: 2rem;
 `;
 
 export const TechStackItem = styled.li`
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 500;
   padding: 0.1em 0.5em;
   border: 1px solid ${({ theme }) => theme.accent};
   border-radius: 5px;

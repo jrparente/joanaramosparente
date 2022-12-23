@@ -18,7 +18,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const BtnLink = styled(Link)`
-  font-size: 1.5rem;
   padding: 0.7em 1.5em;
   border: 0;
   text-decoration: none;
