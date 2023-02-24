@@ -55,10 +55,9 @@ export default function Home() {
           .
         </HomeTitle>
         <Paragraph>
-          I'm currently learning the fundamentals of{" "}
-          <FW600>front-end development</FW600>. My goal is to build web
-          applications that are user-friendly, written in code that is easy to
-          maintain and understand.
+          I'm an experienced Business Manager who has decided to pursue a career
+          in web development. I am passionate about coding and creating
+          beautiful, functional, and user-friendly websites.
         </Paragraph>
       </Section>
     </>
