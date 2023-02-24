@@ -15,12 +15,12 @@ export default function CertificationCard(props) {
       <FlexWrap>
         {props.link && (
           <BtnDark href={props.link} target="_blank">
-            <FontAwesomeIcon icon={faUpRightFromSquare} /> Check Certification
+            <FontAwesomeIcon icon={faUpRightFromSquare} /> Certification
           </BtnDark>
         )}
         {props.finalProject.liveDemo && (
           <BtnDark href={props.finalProject.liveDemo} target="_blank">
-            <FontAwesomeIcon icon={faUpRightFromSquare} /> View Final Project
+            <FontAwesomeIcon icon={faUpRightFromSquare} /> Final Project
           </BtnDark>
         )}
       </FlexWrap>
